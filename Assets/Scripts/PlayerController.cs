@@ -22,6 +22,7 @@ public class PlayerController : MonoBehaviour {
     private bool attacking = false;
     public float attackTime;
     private float attackTimeCounter;
+    public bool playerTalking;
 
 	// Use this for initialization
 	void Start () {
@@ -38,11 +39,17 @@ public class PlayerController : MonoBehaviour {
         {
             Destroy(gameObject);
         }
-        
+        playerTalking = false;
     }
 	
 	// Update is called once per frame
 	void Update () {
+
+        if (playerTalking)
+        {
+            playerRigidbody.velocity = Vector2.zero;
+            return;
+        }
 
         //d = v * t
 
@@ -87,5 +94,6 @@ public class PlayerController : MonoBehaviour {
         animator.SetBool(walkingState, walking);
         animator.SetFloat(lastHorizontal, lastMovement.x);
         animator.SetFloat(lastVertical, lastMovement.y);
+
     }
 }
