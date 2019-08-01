@@ -5,6 +5,7 @@ using UnityEngine;
 public class Quest : MonoBehaviour {
 
     public int questID;
+    public int questExp;
     private QuestManager manager;
 
     public string startText, completedText;
@@ -17,8 +18,9 @@ public class Quest : MonoBehaviour {
 
     public void CompletedQuest()
     {
-        manager.ShowQuestText(completedText);
+        manager.ShowQuestText(completedText + "\n Exp: " + questExp.ToString());
         manager.questCompleted[questID] = true;
         gameObject.SetActive(false);
+        GameObject.Find("Player").GetComponent<CharacterStats>().AddExperience(questExp);
     }
 }
