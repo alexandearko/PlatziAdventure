@@ -7,6 +7,8 @@ public class Quest : MonoBehaviour {
     public int questID;
     public int questExp;
     private QuestManager manager;
+    public bool needItem;
+    public string itemNeeded;
 
     public string startText, completedText;
 
@@ -14,6 +16,14 @@ public class Quest : MonoBehaviour {
     {
         manager = FindObjectOfType<QuestManager>();
         manager.ShowQuestText(startText);
+    }
+    void Update()
+    {
+        if(needItem && manager.itemCollected.Equals(itemNeeded))
+        {
+            manager.itemCollected = null;
+            CompletedQuest();
+        }    
     }
 
     public void CompletedQuest()

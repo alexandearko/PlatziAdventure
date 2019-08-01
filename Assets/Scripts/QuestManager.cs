@@ -8,6 +8,7 @@ public class QuestManager : MonoBehaviour {
     public bool[] questCompleted;
 
     private DialogManager manager;
+    public string itemCollected;
 
 	// Use this for initialization
 	void Start () {
