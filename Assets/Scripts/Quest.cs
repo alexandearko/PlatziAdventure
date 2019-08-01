@@ -8,19 +8,10 @@ public class Quest : MonoBehaviour {
     private QuestManager manager;
 
     public string startText, completedText;
-	// Use this for initialization
-	void Start () {
-
-        manager = FindObjectOfType<QuestManager>();
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 
     public void StartQuest()
     {
+        manager = FindObjectOfType<QuestManager>();
         manager.ShowQuestText(startText);
     }
 

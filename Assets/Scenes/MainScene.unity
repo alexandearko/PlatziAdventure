@@ -23377,6 +23377,80 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 34.988495, y: 1}
   m_EdgeRadius: 0
+--- !u!1 &381804526
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 381804529}
+  - component: {fileID: 381804528}
+  - component: {fileID: 381804527}
+  m_Layer: 5
+  m_Name: Quest0Start
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &381804527
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 381804526}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96a8f8cce45b7834dae80b8b521844ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questID: 0
+  startPoint: 1
+  endPoint: 0
+--- !u!61 &381804528
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 381804526}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.18062437, y: -0.48177576}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 3.7829688, y: 1.9635515}
+  m_EdgeRadius: 0
+--- !u!224 &381804529
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 381804526}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.10998535, y: -0.47999573}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &494993430
 GameObject:
   m_ObjectHideFlags: 0
@@ -36895,6 +36969,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 767a048be2183ec4aa41c2a065cbf631, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  questID: 0
+  startText: 
+  completedText: 
 --- !u!1 &1015929255
 GameObject:
   m_ObjectHideFlags: 0
@@ -39417,6 +39494,80 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1412885596}
+--- !u!1 &1432624987
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1432624990}
+  - component: {fileID: 1432624989}
+  - component: {fileID: 1432624988}
+  m_Layer: 5
+  m_Name: Quest0End
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1432624988
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1432624987}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96a8f8cce45b7834dae80b8b521844ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questID: 0
+  startPoint: 0
+  endPoint: 1
+--- !u!61 &1432624989
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1432624987}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 4.444023, y: -0.4701872}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 9.888046, y: 1.9403744}
+  m_EdgeRadius: 0
+--- !u!224 &1432624990
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1432624987}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 7.600006, y: -12.4900055}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1448400794
 GameObject:
   m_ObjectHideFlags: 0
@@ -39568,7 +39719,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1474484073
 RectTransform:
   m_ObjectHideFlags: 0
@@ -39598,6 +39749,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 767a048be2183ec4aa41c2a065cbf631, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  questID: 0
+  startText: "\xA1Ir a casa de Ricardo!"
+  completedText: "\xA1Has llegado a la casa de Ricardo!"
 --- !u!1001 &1592098825
 Prefab:
   m_ObjectHideFlags: 0
@@ -39728,7 +39882,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4962624594018858, guid: 05109d7602d071b48851d9a51386048a, type: 2}
       propertyPath: m_RootOrder
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 05109d7602d071b48851d9a51386048a, type: 2}
@@ -40095,6 +40249,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 767a048be2183ec4aa41c2a065cbf631, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  questID: 0
+  startText: 
+  completedText: 
 --- !u!4 &2009032793 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4871101993752390, guid: 3043296a920790b4e8fcff8fd4770ab5,
