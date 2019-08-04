@@ -10,6 +10,8 @@ public class QuestManager : MonoBehaviour {
     private DialogManager manager;
     public string itemCollected;
 
+    public string enemyKilled;
+
 	// Use this for initialization
 	void Start () {
 

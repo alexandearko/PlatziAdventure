@@ -24,9 +24,11 @@ public class PlayerController : MonoBehaviour {
     private float attackTimeCounter;
     public bool playerTalking;
 
+    private SFXManager sfxManager;
+
 	// Use this for initialization
 	void Start () {
-
+        sfxManager = FindObjectOfType<SFXManager>();
         animator = GetComponent<Animator>();
         playerRigidbody = GetComponent<Rigidbody2D>();
 
@@ -40,6 +42,7 @@ public class PlayerController : MonoBehaviour {
             Destroy(gameObject);
         }
         playerTalking = false;
+        lastMovement = new Vector2(1, 0);
     }
 	
 	// Update is called once per frame
@@ -61,6 +64,7 @@ public class PlayerController : MonoBehaviour {
             attackTimeCounter = attackTime;
             playerRigidbody.velocity = Vector2.zero;
             animator.SetBool(attackingState, true);
+            sfxManager.playerAttack.Play();
         }
 
         if (attacking)

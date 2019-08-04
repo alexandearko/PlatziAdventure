@@ -7,10 +7,15 @@ public class Quest : MonoBehaviour {
     public int questID;
     public int questExp;
     private QuestManager manager;
-    public bool needItem;
-    public string itemNeeded;
 
     public string startText, completedText;
+    public bool needsItem;
+    public string itemNeeded;
+
+    public bool needsEnemy;
+    public string enemyName;
+    public int numberOfEnemies;
+    private int enemiesKilled;
 
     public void StartQuest()
     {
@@ -19,11 +24,21 @@ public class Quest : MonoBehaviour {
     }
     void Update()
     {
-        if(needItem && manager.itemCollected.Equals(itemNeeded))
+        if(needsItem && manager.itemCollected.Equals(itemNeeded))
         {
             manager.itemCollected = null;
             CompletedQuest();
-        }    
+        }
+
+        if(needsEnemy && manager.enemyKilled.Equals(enemyName))
+        {
+            manager.enemyKilled = null;
+            enemiesKilled++;
+            if(enemiesKilled >= numberOfEnemies)
+            {
+                CompletedQuest();
+            }
+        }
     }
 
     public void CompletedQuest()

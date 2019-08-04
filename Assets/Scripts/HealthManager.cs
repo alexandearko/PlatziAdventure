@@ -15,11 +15,15 @@ public class HealthManager : MonoBehaviour {
 
     private SpriteRenderer characterRenderer;
 
+    public string enemyName;
+    private QuestManager manager;
+
 	// Use this for initialization
 	void Start () {
 
         currentHealth = maxHealth;
         characterRenderer = GetComponent<SpriteRenderer>();
+        manager = FindObjectOfType<QuestManager>();
 	}
 	
 	// Update is called once per frame
@@ -29,6 +33,7 @@ public class HealthManager : MonoBehaviour {
         {
             if (gameObject.tag.Equals("Enemy"))
             {
+                manager.enemyKilled = enemyName;
                 GameObject.Find("Player").GetComponent<CharacterStats>().AddExperience(expWhenDefeated);
             }
 

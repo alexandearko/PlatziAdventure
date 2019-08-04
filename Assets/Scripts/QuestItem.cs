@@ -9,8 +9,8 @@ public class QuestItem : MonoBehaviour {
     private QuestManager manager;
     public string itemName;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
 
         manager = FindObjectOfType<QuestManager>();
 	}
